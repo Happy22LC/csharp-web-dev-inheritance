@@ -36,6 +36,11 @@ namespace Cats
         {
             return "Meow!";
         }
+        //For example, we can add an additional constructor in Cat:
+        public Cat()
+        {
+            Weight = 13.0;
+        }
 
     }
 }

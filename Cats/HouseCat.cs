@@ -22,12 +22,26 @@ namespace Cats
 
         public override string Noise()
         {
-            return "Hello, my name is " + Name + "!";
+            //modified overriding method
+            if (IsSatisfied())
+            {
+                return "Hello, my name is " + Name + "!";
+            }
+            else
+            {
+                return base.Noise();//prints "Meow!"
+            }
+            
         }
 
         public string Purr()
         {
             return "I'm a housecat";
+        }
+        //Then in HouseCat, we can simply define another constructor as this:
+        public HouseCat(string name)
+        {
+            Name = name;
         }
     }
 }
